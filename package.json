@@ -1,0 +1,19 @@
+{
+  "name": "YouTube_Descriptions_Updater",
+  "version": "1.0.0",
+  "description": "Batch process video descriptions",
+  "main": "youtube-updater.js",
+  "scripts": {
+    "dev": "nodemon youtube-updater"
+  },
+  "author": "Devon Crawford",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^2.5.9",
+    "express": "^4.16.3",
+    "nodemon": "^1.17.3",
+    "request": "^2.85.0",
+    "request-promise": "^4.2.2",
+    "serve-favicon": "^2.5.0"
+  }
+}
