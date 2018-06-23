@@ -28,10 +28,8 @@ into master.
 
 ## Security
 Currently the app is not setup for concurrent users as the credentials are
-stored in local memory. We must store the youtube api token inside of a session
-in the users browser. Passport.js looks like a good library to assist
-with this. http://www.passportjs.org/ I am still researching this and will likely
-implement this ASAP
+stored in local memory. We must store the youtube api token inside of a session. Passport.js looks like a good library to assist
+with this. http://www.passportjs.org/ I am still researching this and will implement this ASAP
 
 ## String replacement (backend)
 Six string replacement functions need to be written to update the descriptions.
