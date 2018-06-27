@@ -3,6 +3,10 @@ body, html {
     margin: 0;
 }
 
+a:hover, button:hover, .btn:hover {
+    cursor: pointer;
+}
+
 .back {
     height: 100%;
     background-position: center;

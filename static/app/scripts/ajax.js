@@ -115,4 +115,10 @@ $('#searchSelect').change(function() {
     else {
         $('.inputOP').prop('hidden', true);
     }
-})
+});
+
+$('#logout-button').on('click', function ()
+{
+   console.log('logging out..');
+   window.location.replace('/api/yt-logout');
+});

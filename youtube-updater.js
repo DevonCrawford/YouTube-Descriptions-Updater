@@ -22,6 +22,7 @@ app.listen(8082, function () {
 // YOUTUBE API AUTH
 let youtubeToken = "abc";
 const youtubeRedirect = "http://localhost:8082/api/yt-auth";
+const homepageUrl = '../../';
 let uploadPlaylist = "123";
 let youtubeUploads = [];
 
@@ -179,6 +180,19 @@ api.get('/yt-desc/uploadRange/:startId/:endId/:nextPageToken', (req, res) => {
         }
         else res.redirect(`/api/yt-desc/uploadRange/${req.params.startId}/${req.params.endId}/${json.nextPageToken}`);
 
+    });
+});
+
+
+api.get('/yt-logout', (req, res) => {
+
+    if (youtubeToken == 'abc')res.redirect(homepageUrl);
+    request({
+        method: 'POST',
+        url: `https://accounts.google.com/o/oauth2/revoke?token=${youtubeToken}`,
+    }, (error, response, body) =>
+    {
+        res.redirect(homepageUrl);
     });
 });
 
